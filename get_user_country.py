@@ -1,4 +1,4 @@
-def get_user_country(data:list, name:str) -> list:
+def get_user_country(data: list, name: str) -> list:
     """
     Return the country of a user with a given name
 
@@ -8,4 +8,24 @@ def get_user_country(data:list, name:str) -> list:
     Returns:
         str: The country of the user with the given name
     """
-    return 
+    for n in range(len(data)):
+        if data[n]['name'] == name:
+            return data[n]['country']
+
+
+name = 'Shamshod'
+data = [
+    {
+        'name': 'Bobobek',
+        'country': 'USA'
+    },
+    {
+        'name': 'Shamshod',
+        'country': 'Russia'
+    },
+    {
+        'name': 'Nortoy',
+        'country': 'UK'
+    }
+]
+print(get_user_country(data, name))
