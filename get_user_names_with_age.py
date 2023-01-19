@@ -1,4 +1,4 @@
-def get_user_names_with_age(data:list, age:int) -> list:
+def get_user_names_with_age(data: list, age: int) -> list:
     """
     Return a list of users with a given age
 
@@ -8,4 +8,22 @@ def get_user_names_with_age(data:list, age:int) -> list:
     Returns:
         list: A list of users with the given age
     """
-    return 
+    idx = 0
+    for n in range(len(data)):
+        if data[n]['age'] == age:
+            idx = n
+    return data[idx]['name']
+
+
+age = 17
+data = [
+    {
+        'name': 'Dilfuza',
+        'age': 18
+    },
+    {
+        'name': 'Madina',
+        'age': 17
+    }
+]
+print(get_user_names_with_age(data, age))
