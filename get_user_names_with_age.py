@@ -12,7 +12,7 @@ def get_user_names_with_age(data: list, age: int) -> list:
     for n in range(len(data)):
         if data[n]['age'] == age:
             idx = n
-    return data[idx]['name']
+    return [data[idx]['name']]
 
 
 age = 17
