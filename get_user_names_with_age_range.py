@@ -16,7 +16,7 @@ def get_user_names_with_age_range(data: list, min_age: int, max_age: int) -> lis
             idx.append(n)
     for i in idx:
         names.append(data[i]['name'])
-        return names
+    return names
 
 
 data = [
@@ -43,5 +43,5 @@ data = [
 
 ]
 min_age = 16
-max_age = 20
+max_age = 30
 print(get_user_names_with_age_range(data, min_age, max_age))
