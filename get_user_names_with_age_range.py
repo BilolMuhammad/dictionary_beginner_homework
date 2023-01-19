@@ -12,7 +12,7 @@ def get_user_names_with_age_range(data: list, min_age: int, max_age: int) -> lis
     idx = []
     names = []
     for n in range(len(data)):
-        if data[n]['age'] > min_age and data[n]['age'] < max_age:
+        if data[n]['age'] >= min_age and data[n]['age'] <= max_age:
             idx.append(n)
     for i in idx:
         names.append(data[i]['name'])
@@ -21,27 +21,14 @@ def get_user_names_with_age_range(data: list, min_age: int, max_age: int) -> lis
 
 data = [
     {
-        'name': 'Sardor',
-        'age': 29
+        'name': 'Anny',
+        'age': 20
     },
     {
-        'name': 'Sarvar',
-        'age': 16
-    },
-    {
-        'name': 'Jasur',
-        'age': 19
-    },
-    {
-        'name': 'Mavlon',
-        'age': 33
-    },
-    {
-        'name': 'Toyir',
-        'age': 17
+        'name': 'Mary',
+        'age': 30
     }
-
 ]
-min_age = 16
+min_age = 20
 max_age = 30
 print(get_user_names_with_age_range(data, min_age, max_age))
